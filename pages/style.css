@@ -1,0 +1,346 @@
+:root {
+    --color-bg: #f7faf8;
+    --color-surface: #ffffff;
+    --color-text: #1d2525;
+    --color-muted: #586767;
+    --color-primary: #14746f;
+    --color-primary-dark: #0b4f4a;
+    --color-accent: #f4a261;
+    --color-border: #d8e2dc;
+    --shadow-card: 0 1rem 2.5rem rgba(29, 37, 37, 0.1);
+    --radius: 0.5rem;
+    --max-width: 70rem;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    width: min(100% - 2rem, var(--max-width));
+    margin: 0 auto;
+    padding: 1.25rem 0;
+}
+
+.logo {
+    color: var(--color-primary-dark);
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.nav-menu a {
+    border-radius: 999px;
+    padding: 0.55rem 0.9rem;
+    color: var(--color-muted);
+    font-weight: 700;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.nav-menu a:hover {
+    background: var(--color-primary);
+    color: #ffffff;
+}
+
+main {
+    width: min(100% - 2rem, var(--max-width));
+    margin: 0 auto;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    min-height: 72vh;
+    padding: 2rem 0 4rem;
+}
+
+.hero-text {
+    flex: 1 1 24rem;
+}
+
+.hero h1,
+.page-title h1 {
+    max-width: 12ch;
+    margin: 0;
+    font-size: clamp(2.4rem, 8vw, 4.8rem);
+    line-height: 1;
+}
+
+.hero p,
+.page-title p {
+    max-width: 42rem;
+    color: var(--color-muted);
+    font-size: 1.05rem;
+}
+
+.hero img {
+    flex: 1 1 24rem;
+    width: 100%;
+    min-height: 24rem;
+    max-height: 34rem;
+    object-fit: cover;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-card);
+}
+
+.tagline {
+    margin: 0 0 0.75rem;
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0;
+    text-transform: uppercase;
+}
+
+.button {
+    display: inline-block;
+    border: 0;
+    border-radius: 999px;
+    margin-top: 1rem;
+    padding: 0.8rem 1.2rem;
+    background: var(--color-primary);
+    color: #ffffff;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 800;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.button:hover {
+    background: var(--color-primary-dark);
+    transform: translateY(-0.12rem);
+}
+
+.section,
+.page-title,
+.cards-container,
+.services-layout,
+.contact-layout {
+    padding: 3rem 0;
+}
+
+.section-heading {
+    max-width: 40rem;
+    margin-bottom: 1.5rem;
+}
+
+.section-heading h2,
+.page-title h1 {
+    color: var(--color-primary-dark);
+}
+
+.about-grid,
+.cards-container,
+.service-list {
+    display: flex;
+    gap: 1rem;
+}
+
+.info-card,
+.destination-card,
+.service-card,
+.contact-form {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-card);
+}
+
+.info-card {
+    flex: 1 1 0;
+    padding: 1.25rem;
+}
+
+.info-card h3,
+.destination-card h2,
+.service-card h2 {
+    margin-top: 0;
+    color: var(--color-primary-dark);
+}
+
+.destination-card {
+    flex: 1 1 15rem;
+    overflow: hidden;
+}
+
+.destination-card img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.destination-card div,
+.service-card {
+    padding: 1.25rem;
+}
+
+.services-layout,
+.contact-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+.services-layout > img,
+.contact-layout > img {
+    flex: 0 1 22rem;
+    width: 100%;
+    border-radius: var(--radius);
+    object-fit: cover;
+    aspect-ratio: 4 / 5;
+}
+
+.service-list {
+    flex: 1 1 auto;
+    flex-wrap: wrap;
+}
+
+.service-card {
+    flex: 1 1 16rem;
+}
+
+.contact-form {
+    flex: 1 1 28rem;
+    padding: 1.5rem;
+}
+
+.form-row {
+    display: flex;
+    gap: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex: 1 1 0;
+    flex-direction: column;
+    gap: 0.35rem;
+    margin-bottom: 1rem;
+}
+
+label {
+    color: var(--color-primary-dark);
+    font-weight: 800;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: 0.8rem;
+    background: #ffffff;
+    color: var(--color-text);
+    font: inherit;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 0.18rem solid rgba(20, 116, 111, 0.25);
+    border-color: var(--color-primary);
+}
+
+footer {
+    margin-top: 3rem;
+    padding: 1.5rem 1rem;
+    background: var(--color-primary-dark);
+    color: #ffffff;
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    .hero,
+    .services-layout,
+    .contact-layout {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .hero {
+        min-height: auto;
+    }
+
+    .hero img,
+    .services-layout > img,
+    .contact-layout > img {
+        min-height: 18rem;
+        aspect-ratio: 16 / 9;
+    }
+
+    .cards-container {
+        flex-wrap: wrap;
+    }
+
+    .destination-card {
+        flex-basis: calc(50% - 1rem);
+    }
+}
+
+@media (max-width: 768px) {
+    .site-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+    }
+
+    .nav-menu a {
+        width: 100%;
+        border: 1px solid var(--color-border);
+        background: var(--color-surface);
+        text-align: center;
+    }
+
+    .about-grid,
+    .cards-container,
+    .service-list,
+    .form-row {
+        flex-direction: column;
+    }
+
+    .destination-card {
+        flex-basis: auto;
+    }
+
+    .hero h1,
+    .page-title h1 {
+        max-width: 100%;
+        font-size: 2.4rem;
+    }
+}
