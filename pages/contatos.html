@@ -17,5 +17,51 @@
         </nav>
     </header>
 
+     <main>
+        <section class="page-title">
+            <p class="tagline">contato ou reserva</p>
+            <h1>Vamos planejar sua viagem</h1>
+            <p>Preencha o formul&aacute;rio e a equipe TripWay entrar&aacute; em contato com uma sugest&atilde;o de roteiro.</p>
+        </section>
+
+        <section class="contact-layout">
+            <img src="../images/cidade.jpg" alt="Cidade real ao anoitecer representando destino de viagem">
+            <form class="contact-form" action="#" method="post">
+                <div class="form-group">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="voce@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="destino">Destino de interesse</label>
+                    <select id="destino" name="destino" required>
+                        <option value="">Selecione</option>
+                        <option value="praia">Praia Azul</option>
+                        <option value="montanha">Serra Viva</option>
+                        <option value="cidade">Cidade Luz</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="data">Data</label>
+                        <input type="date" id="data" name="data" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="pessoas">Quantidade de pessoas</label>
+                        <input type="number" id="pessoas" name="pessoas" min="1" max="20" value="2" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" name="mensagem" rows="5" placeholder="Conte como imagina sua viagem"></textarea>
+                </div>
+                <button class="button" type="submit">Enviar reserva</button>
+            </form>
+        </section>
+    </main>
+
 </body>
 </html>
