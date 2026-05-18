@@ -67,6 +67,18 @@ a {
     transition: background 0.2s ease, color 0.2s ease;
 }
 
+.nav-menu a.active {
+    color: var(--color-primary-dark);
+    border-bottom: 2px solid var(--color-primary-dark);
+    border-radius: 0;
+}
+
+.nav-menu a:hover {
+    background: var(--color-primary);
+    color: #ffffff;
+}
+}
+
 .nav-menu a:hover {
     background: var(--color-primary);
     color: #ffffff;
@@ -343,4 +355,26 @@ footer {
         max-width: 100%;
         font-size: 2.4rem;
     }
+}
+
+.services-layout {
+    flex-direction: column;
+}
+.services-layout > img {
+    max-height: 25rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.contact-layout {
+    flex-direction: column;
+}
+.contact-layout > img {
+    max-height: 25rem;
+    width: 100%;
+    object-fit: cover;
+}
+.contact-form {
+    width: 100%;
+    max-width: 100%;
 }
